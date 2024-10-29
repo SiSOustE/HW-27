@@ -1,8 +1,8 @@
-// функция, которая принимает массив символов, а возвращает слова
+/* I.
+функция, которая принимает массив символов, а возвращает слова
 
-// Вариант I
-
-/*let semantics // осмысленный набор символов - слова
+//Вариант 1
+let semantics // осмысленный набор символов - слова
 function getWords (setOfSimbols) {
 semantics = setOfSimbols.join('');
   return semantics;
@@ -10,9 +10,7 @@ semantics = setOfSimbols.join('');
 getWords(['с', 'а', 'м', 'ы', 'х', ' ', 'ч', 'е', 'с', 'т', 'н', 'ы', 'х', ' ', 'п', 'р', 'а', 'в', 'и', 'л']);
 console.log(semantics);*/
 
-// ------------------------------------
-// Вариант II
-
+// Вариант 2
 /*let semantics;
 function getWords (setOfSimbols) {
   semantics = setOfSimbols.join('');
@@ -25,8 +23,7 @@ const word3 = ['п', 'р', 'а', 'в', 'и', 'л'];*/
 // const quote =( word1.concat([' ']).concat(word2).concat([' ']).concat(word3)).join('');
 // console.log(quote);
 
-// ------------------------------------
-// Вариант III
+// Вариант 3
 
 let quote
 function getQuote(word1, word2, word3) {
@@ -36,3 +33,29 @@ function getQuote(word1, word2, word3) {
 
 getQuote(['с', 'а', 'м', 'ы', 'х'], ['ч', 'е', 'с', 'т', 'н', 'ы', 'х'], ['п', 'р', 'а', 'в', 'и', 'л']);
 console.log(quote);
+
+/* ------------------------------------------------------
+II.
+функция которая принимает объект с данными пользователя и выводит строку «Привет, username, вам age лет!», где в username поставлено имя, а в age — возраст пользователя.// (подстановка template strings)*/
+
+const user = {
+  name: 'Фемистоклюс',
+  age: 60
+};
+
+let userStrData;
+
+// Вариант 1
+function convertObjToStr(user) {
+  userStrData = user.toString()
+  // userStrData = JSON.stringify(user);
+  return userStrData
+}
+
+convertObjToStr(any1);
+console.log(userStrData);
+
+// Вариант 2
+convertObjToStr = (user) => console.log(`Привет, ${user.name}, Вам ${user.age} лет`);
+convertObjToStr = (user) => `Привет, ${user.name}, Вам ${user.age}`;
+concole.log(convertObjToStr)
