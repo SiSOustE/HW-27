@@ -36,6 +36,6 @@ console.log(userStrData);
 
 // Arrow function
 const converObjToStrArrow = (user) => {
-  `Привет, ${user.name}, Вам ${user.age} лет!`
+  return `Привет, ${user.name}, Вам ${user.age} лет!`
 };
 console.log(converObjToStrArrow(user));
